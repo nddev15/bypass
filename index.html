@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>tuiducios</title>
+  <link rel="icon" type="image/png" href="img/icon.gif">
+  <meta name="description" content="Web tuiducios Hỗ Trợ Bypass Delta, Linkvertise, Lootlabs, ... Và Còn Nhiều Thứ Khác, Bypass Siêu Nhanh An Toàn Uy Tín!">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="tuiducios">
+  <meta property="og:description" content="Web tuiducios Hỗ Trợ Bypass Delta, Linkvertise, Lootlabs, ... Và Còn Nhiều Thứ Khác, Bypass Siêu Nhanh An Toàn Uy Tín!">
+  <meta property="og:url" content="https://tuiducios.xyz/">
+  <meta property="og:image" content="https://tuiducios.xyz/img/icon.gif">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="tuiducios">
+  <meta name="twitter:description" content="Web tuiducios Hỗ Trợ Bypass Delta, Linkvertise, Lootlabs, ... Và Còn Nhiều Thứ Khác, Bypass Siêu Nhanh An Toàn Uy Tín!">
+  <meta name="twitter:image" content="https://tuiducios.xyz/img/icon.gif">
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --primary: #8b5cf6;
+            --secondary: #d946ef;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #050505;
+            color: #ffffff;
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: 
+        #universe-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: twinkle var(--duration) infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        .nav-menu {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 10px 25px;
+            border-radius: 100px;
+            display: flex;
+            gap: 20px;
+            z-index: 100;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .nav-item {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: #c084fc;
+            text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
+        }
+        .neon-luxury-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            background: linear-gradient(90deg, #fff, #c084fc, #ff4ecd, #c084fc, #fff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: luxury-sweep 4s linear infinite;
+        }
+
+        @keyframes luxury-sweep {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+        .main-card {
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+            width: 95%;
+            max-width: 500px;
+            border-radius: 40px;
+            padding: 40px;
+            z-index: 10;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        .main-card::-webkit-scrollbar { width: 4px; }
+        .main-card::-webkit-scrollbar-track { background: transparent; }
+        .main-card::-webkit-scrollbar-thumb { background: rgba(139, 92, 246, 0.3); border-radius: 10px; }
+
+        .page-content {
+            display: none;
+            animation: fadeSlide 0.5s ease forwards;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .input-box {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+        }
+
+        #clearBtn { opacity: 0; pointer-events: none; transition: 0.2s; }
+        #clearBtn.visible { opacity: 1; pointer-events: auto; }
+        .support-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .support-header {
+            font-size: 14px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 10px;
+        }
+        .support-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        .support-item {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+        .support-item:hover {
+            color: #c084fc;
+            background: rgba(192, 132, 252, 0.05);
+            border-color: rgba(192, 132, 252, 0.2);
+        }
+
+        .footer-link {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #c084fc;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="universe-container"></div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <div class="nav-item active" onclick="switchPage('home', this)">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </div>
+        <div class="nav-item" onclick="switchPage('support', this)">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Hỗ trợ Bypass</span>
+        </div>
+        <div class="w-[1px] h-3 bg-white/10 my-auto"></div>
+        <a href="https://t.me/godeyes666" target="_blank" class="nav-item">
+            <i class="fa-brands fa-telegram text-[#0088cc]"></i>
+            <span>Telegram</span>
+        </a>
+        <a href="https://cheatlibrary.xyz" target="_blank" class="nav-item">
+            <i class="fa-solid fa-link"></i>
+            <span>Kho IPA Vip</span>
+        </a>
+    </nav>
+
+    <div class="main-card">
+        <!-- PAGE: HOME (BYPASS) -->
+       <div id="page-home" class="page-content active">
+            <div class="text-center mb-8">
+                <div class="inline-block p-4">
+    <img src="img/icon.gif" class="w-12 mx-auto">
+</div>
+                <h1 class="neon-luxury-title">tuiducios</h1>
+                <p class="text-slate-500 text-[10px] uppercase tracking-[0.2em] mt-2 font-bold">Bypass Linkvertise, Delta, Lootlabs, ...</p>
+            </div>
+
+            <div class="space-y-5">
+                <div>
+                    <label class="text-[9px] uppercase tracking-[0.3em] text-slate-500 font-black mb-2 block ml-1">Destination URL</label>
+                    <div class="input-box flex items-center px-5 py-4 rounded-2xl relative">
+                        <i class="fa-solid fa-link text-slate-600 mr-4 text-xs"></i>
+                        <input type="text" id="urlInput" placeholder="Dán link của bạn tại đây..." class="bg-transparent border-none outline-none w-full text-white text-sm placeholder-slate-700 pr-8">
+                        <button id="clearBtn" class="absolute right-5 text-slate-600 hover:text-white"><i class="fa-solid fa-circle-xmark"></i></button>
+                    </div>
+                </div>
+
+                <button id="bypassBtn" class="w-full btn-gradient py-4 rounded-2xl font-black text-white text-xs tracking-widest flex items-center justify-center gap-2 group">
+                    <span>BẮT ĐẦU GIẢI MÃ</span>
+                    <i class="fa-solid fa-angles-right group-hover:translate-x-1 transition-transform"></i>
+                </button>
+
+                <div id="loader" class="hidden text-center py-4">
+                    <div class="w-8 h-8 border-2 border-violet-500/20 border-t-violet-500 rounded-full animate-spin mx-auto mb-2"></div>
+                    <p class="text-[9px] text-violet-400 font-black tracking-[0.3em] uppercase">Scanning...</p>
+                </div>
+
+                <div id="resultBox" class="hidden bg-violet-500/5 border border-violet-500/20 rounded-2xl p-5">
+                    <p class="text-[9px] font-black text-violet-400 text-center mb-3 tracking-widest uppercase">KẾT QUẢ GIẢI MÃ</p>
+                    <div id="resultLink" class="p-3 bg-black/40 rounded-xl text-violet-200 font-mono text-[10px] break-all text-center border border-white/5 mb-4 min-h-[40px] flex items-center justify-center">...</div>
+                    <div id="actionArea">
+                        <a id="openBtn" href="#" target="_blank" class="hidden w-full text-center py-3 btn-gradient text-white rounded-xl text-[10px] font-black tracking-widest">TRUY CẬP NGAY</a>
+                        <button id="bigCopyBtn" onclick="copyToClipboard(document.getElementById('resultLink').innerText, this)" class="hidden w-full text-center py-3 btn-gradient text-white rounded-xl text-[10px] font-black tracking-widest">SAO CHÉP VĂN BẢN</button>
+                    </div>
+                </div>
+
+                <div id="status-message" class="hidden text-center text-[9px] py-3 rounded-xl font-black tracking-widest uppercase border border-white/5"></div>
+            </div>
+        </div>
+
+        <!-- PAGE: SUPPORT LIST -->
+        <div id="page-support" class="page-content">
+            <div class="text-center mb-8">
+                <h2 class="text-xl font-black text-white uppercase tracking-tighter">Hỗ Trợ Bypass</h2>
+                <p class="text-slate-500 text-[10px] mt-1 uppercase tracking-widest font-bold">Service Capability List</p>
+            </div>
+
+            <!-- Key System Section -->
+            <div class="support-section">
+                <div class="support-header">
+                    <i class="fa-solid fa-key text-violet-400"></i>
+                    <span>Key System</span>
+                </div>
+                <div class="support-list">
+                    <div class="support-item">Platoboost</div>
+                    <div class="support-item">Pandadevelopment</div>
+                    <div class="support-item">Trigon</div>
+                    <div class="support-item">Violated</div>
+                    <div class="support-item">Blox-script</div>
+                    <div class="support-item">Hydrogen</div>
+                    <div class="support-item">Codex</div>
+                </div>
+            </div>
+
+            <!-- Ad-Link Section -->
+            <div class="support-section">
+                <div class="support-header">
+                    <i class="fa-solid fa-rectangle-ad text-violet-400"></i>
+                    <span>Ad-Link</span>
+                </div>
+                <div class="support-list">
+                    <div class="support-item">Linkvertise</div>
+                    <div class="support-item">Admaven</div>
+                    <div class="support-item">Workink</div>
+                    <div class="support-item">Fly.inc</div>
+                    <div class="support-item">Shrtfly</div>
+                    <div class="support-item">Lockrso</div>
+                    <div class="support-item">Linkunlocker</div>
+                    <div class="support-item">Link-unlock</div>
+                    <div class="support-item">Arolinks</div>
+                </div>
+            </div>
+
+            <!-- Paste Section -->
+            <div class="support-section">
+                <div class="support-header">
+                    <i class="fa-solid fa-paste text-violet-400"></i>
+                    <span>Paste</span>
+                </div>
+                <div class="support-list">
+                    <div class="support-item">Pastebin</div>
+                    <div class="support-item">Paste-Drop</div>
+                    <div class="support-item">Pastefy</div>
+                    <div class="support-item">Pasterso</div>
+                </div>
+            </div>
+
+            <button onclick="switchPage('home', document.querySelector('.nav-item'))" class="w-full mt-4 py-3 border border-white/10 rounded-xl text-[10px] font-bold text-slate-400 hover:text-white transition-colors uppercase tracking-widest">Quay lại trang chủ</button>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-white/5 text-center">
+            <p class="text-[8px] text-slate-700 uppercase tracking-[0.4em] font-bold">
+                <a href="https://tuiducios.xyz" target="_blank" class="footer-link">© tuiducios - 2026</a>
+            </p>
+        </div>
+    </div>
+<script src="api/bypass.js"></script>
+     
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

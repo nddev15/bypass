@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "buildCommand": "npm install",
+  "env": {
+    "API_KEY": "@api_key"
+  },
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "public": true
+}
