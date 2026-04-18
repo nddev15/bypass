@@ -1,8 +1,6 @@
 {
   "version": 2,
   "buildCommand": "npm install",
-  "env": {
-    "IZEN_API_KEY": "@api_key"
   },
   "functions": {
     "api/*.js": {
