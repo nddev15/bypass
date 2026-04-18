@@ -1,8 +1,9 @@
 {
   "version": 2,
   "buildCommand": "npm install",
+    "env": {
+    "IZEN_API_KEY": ""
   },
-  {
   "functions": {
     "api/*.js": {
       "runtime": "nodejs18.x"
