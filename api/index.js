@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // API Configuration
-const IZEN_API_URL = 'https://api.izen.lol/v1/bypass';
+const IZEN_API_URL = process.env.API_KEY || 'https://api.izen.lol/v1/bypass';
 const IZEN_API_KEY = process.env.API_KEY || '';
 
 // URL validation
